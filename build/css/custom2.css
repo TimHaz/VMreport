@@ -1,0 +1,14 @@
+  .table-padded th,
+  .table-padded td {
+    padding-left: 10px;
+	padding-right: 10px;
+  }
+  .critical {
+            background-color: #FF0000 !important;
+			font-weight: bold;
+			color:black;
+  } 
+  .warning {
+	background-color: #F2FF8F !important;
+    color:black;
+  }

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>vCenter Report | Dashboard 1</title>
+
+    <!-- Bootstrap -->
+    <link href="../vendors/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+
+    <!-- Custom Theme Style -->
+    <link href="../build/css/custom.css" rel="stylesheet">
+	<link href="../build/css/custom2.css" rel="stylesheet">
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>vCenter Report</span></a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                <h3>General</h3>
+                <ul class="nav side-menu">
+                  <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="index.html">Homepage</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-clone"></i>PFGVCSA01 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="PFGVCSA01_Dashboard.html">vCenter Overview</a></li>
+                      <li><a href="PFGVCSA01_Snapshots.html">Snapshot Report</a></li>
+					  <li><a href="PFGVCSA01_Clusters.html">Cluster Overview</a></li>
+					  <li><a href="PFGVCSA01_Hosts.html">Hosts Overview</a></li>
+					  <li><a>Datastore Details<span class="fa fa-chevron-down"></span></a>
+						<ul class="nav child_menu">
+							<li class="sub_menu"><a href="PFGVCSA01_Datastores.html">Datastore Overview</a></li>
+                            <li><a href="PFGVCSA01_DRS.html">DRS Migrations</a>
+                            </li>
+                            <li><a href="PFGVCSA01_ThickProv.html">Thick Provisioned Disks</a>
+                            </li>
+                        </ul>
+					  <li><a href="PFGVCSA01_DeletedVMs.html">Deleted VMs</a></li>
+					  <li><a href="PFGVCSA01_Reservations.html">Resource Reservations</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-clone"></i>PFGVCSA02 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="PFGVCSA02_Dashboard.html">vCenter Overview</a></li>
+                      <li><a href="PFGVCSA02_Snapshots.html">Snapshot Report</a></li>
+					  <li><a href="PFGVCSA02_Clusters.html">Cluster Overview</a></li>
+					  <li><a href="PFGVCSA02_Hosts.html">Hosts Overview</a></li>
+					  <li><a>Datastore Details<span class="fa fa-chevron-down"></span></a>
+						<ul class="nav child_menu">
+							<li class="sub_menu"><a href="PFGVCSA02_Datastores.html">Datastore Overview</a></li>
+                            <li><a href="PFGVCSA02_DRS.html">DRS Migrations</a>
+                            </li>
+                            <li><a href="PFGVCSA02_ThickProv.html">Thick Provisioned Disks</a>
+                            </li>
+                        </ul>
+					  <li><a href="PFGVCSA02_DeletedVMs.html">Deleted VMs</a></li>
+					  <li><a href="PFGVCSA02_Reservations.html">Resource Reservations</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-clone"></i>HOSWakvCenter-01 <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="fixed_sidebar.html">vCenter Overview</a></li>
+                      <li><a href="fixed_footer.html">Snapshot Report</a></li>
+                    </ul>
+                  </li>                  
+                </ul>
+              </div>
+              <div class="menu_section">
+                <h3>Additional Pages</h3>
+                <ul class="nav side-menu">
+                  <li><a><i class="fa fa-sitemap"></i> Multilevel Menu <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                        <li><a href="#level1_1">Level One</a>
+                        <li><a>Level One<span class="fa fa-chevron-down"></span></a>
+                          <ul class="nav child_menu">
+                            <li class="sub_menu"><a href="level2.html">Level Two</a>
+                            </li>
+                            <li><a href="#level2_1">Level Two</a>
+                            </li>
+                            <li><a href="#level2_2">Level Two</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li><a href="#level1_2">Level One</a>
+                        </li>
+						</li>
+					</ul>
+                  </li>                  
+                </ul>
+              </div>
+            </div>
+            <!-- /sidebar menu -->
+
+            <!-- /menu footer buttons -->
+            <div class="sidebar-footer hidden-small">
+			  <a>
+				<span class="glyphicon"></span>
+			  </a>
+			  <a>
+				<span class="glyphicon"></span>
+			  </a>
+              <a data-toggle="tooltip" data-placement="top" title="Settings">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="FullScreen">
+                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+              </a>
+            </div>
+            <!-- /menu footer buttons -->
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav>
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+        <div class="right_col" role="main">
+          <div class="">
+            <div class="page-title">
+              <div class="title_left">
+                <div id='vCenterTitle'></div>
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="row">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+
+                  <div class="x_content">
+			<!-- /vCenter Overview -->  
+			<div class="col-md-8 col-sm-8 col-xs-8">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>vCenter Overview</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+
+                    <table id="vCenterOverview" class="table-striped table-bordered table-hover table-padded" width='100%'>
+					</table>
+
+                  </div>
+                </div>
+              </div>
+			<!-- /vCenter Overview -->  
+			  
+			<!-- VM Overview -->
+			<div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>VM Overview</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <div id="VMStatus_donut" style="height:270px;"></div>
+                  </div>
+                </div>
+              </div>
+			  <!-- /VM Overview -->
+			  
+			<!-- General Overview -->  
+			<div class="col-md-8 col-sm-8 col-xs-8">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>vCenter General Info</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <table id="vCenterGenInfo" class=" table-padded table-hover table-striped table-bordered" width='100%'>
+					</table>
+                  </div>
+                </div>
+              </div>
+			<!-- /General Overview -->  
+			
+			<!-- VM Tools Overview -->
+			<div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>VM Tools Overview</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+                    <div id="VMTools_donut" style="height:270px;"></div>
+                  </div>
+                </div>
+              </div>
+			  <!-- /VM Overview -->
+			  
+			<!-- Licencing Overview -->  
+			<div class="col-md-12 col-sm-12 col-xs-12">
+                <div class="x_panel">
+                  <div class="x_title">
+                    <h2>Licence Information</h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                      </li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                        <ul class="dropdown-menu" role="menu">
+                          <li><a href="#">Settings 1</a>
+                          </li>
+                          <li><a href="#">Settings 2</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                  </div>
+                  <div class="x_content">
+
+                    <table id="vCenterLicInfo" class="table-hover table-padded table-striped table-bordered" width='100%'>
+						<thead>
+							<tr>
+								<th>vCenter</th><th>Licence Name</th><th>Key</th><th>Total</th><th>Used</th><th>Expiry Date</th><th>Information</th>
+							</tr>
+						</thead>
+					</table>
+
+                  </div>
+                </div>
+              </div>
+			<!-- /General Overview -->  
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+        <footer>
+          <div class="pull-right">
+            vCenter Server Report
+          </div>
+          <div class="clearfix"></div>
+        </footer>
+        <!-- /footer content -->
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="../vendors/nprogress/nprogress.js"></script>
+    <!-- ECharts -->
+    <script src="../vendors/echarts/dist/echarts.min.js"></script>
+	<script src="../vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="../vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="../vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+    <script src="../vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+    <script src="../vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="../vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+    <script src="../vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+    <script src="../vendors/jszip/dist/jszip.min.js"></script>
+    <script src="../vendors/pdfmake/build/pdfmake.min.js"></script>
+    <script src="../vendors/pdfmake/build/vfs_fonts.js"></script>
+	
+	
+	<!-- Custom Charts -->
+    <script src="../build/js/Charts.js"></script>
+	<script src="../build/js/HTMLmanipulation.js"></script>
+	
+    <!-- Custom Theme Scripts -->
+    <script src="../build/js/custom.min.js"></script>
+	<script type="text/javascript" class="init">
+		$(document).ready(function() {
+			ServerName = 'pfgvcsa01'
+			var  VCTitle = document.getElementById("vCenterTitle");
+			renderHTML('<h2>vCenter Server : ' + ServerName.toUpperCase() + '</h2>',VCTitle);
+			init_CustomCharts(ServerName);
+			$('#vCenterLicInfo').length&&$("#vCenterLicInfo").DataTable( {
+			    dom:"Blfrtip",
+				"ajax": 'Data/'+ ServerName +'/LicenceInfo.json',
+				keys:!0,
+				"bFilter": false, "bInfo": false, "bPaginate": false, "bSort": false,
+				"columns": [
+					{ "data": "vCenter" },
+					{ "data": "Name" },
+					{ "data": "Key" },
+					{ "data": "Total" },
+					{ "data": "Used" },
+					{ "data": "Expiry" },
+					{ "data": "Info" }
+				]
+			} );
+			$('#vCenterGenInfo').length&&$("#vCenterGenInfo").DataTable( {
+			    dom:"Blfrtip",
+				"bFilter": false, "bInfo": false, "bPaginate": false, "bSort": false,
+				"ajax": 'Data/'+ ServerName +'/vCenterGenInfo.json',
+				"columns": [
+					{ "data": "name" },
+					{ "data": "value" }
+				]
+			} );
+			$('#vCenterOverview').length&&$("#vCenterOverview").DataTable( {
+			    dom:"Blfrtip",
+				"bFilter": false, "bInfo": false, "bPaginate": false, "bSort": false,
+				"ajax": 'Data/'+ ServerName +'/vCenterOverview.json',
+				"columns": [
+					{ "data": "name" },
+					{ "data": "value" }
+				],
+				"createdRow": function ( row, data, index ) {
+					if (data.name == "VMWare Tools Status :") {
+						if (data.value !== "Tools Ok") {
+							$('td',row).eq(1).addClass('critical');
+						}
+					}
+				}
+			} );	
+		} );
+	</script>
+  </body>
+</html>
